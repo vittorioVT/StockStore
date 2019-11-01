@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { ProductElements } from '../Intefaces/ProductElements';
 
 @Component({
   selector: 'app-products',
@@ -17,9 +18,11 @@ export class ProductsComponent implements OnInit {
   constructor(private service: ProductService) { }
 
   ngOnInit() {
+    
     this.service.getAll().subscribe((data) => {
 
       console.log('Result - ', data);
+      this.dataSource = new MatTableDataSource<ProductElements>(data as ProductElements[]);
     })
   }
 
