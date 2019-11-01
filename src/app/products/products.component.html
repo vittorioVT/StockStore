@@ -1,1 +1,90 @@
-<p>products works!</p>
+<p>Эта секция для вывода информации о продуктах</p>
+
+<!-- Start Table -->
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Id Column -->
+  <ng-container matColumnDef="Id">
+    <th mat-header-cell *matHeaderCellDef> No </th>
+    <td mat-cell *matCellDef="let element"> {{element.Id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Name">
+    <th mat-header-cell *matHeaderCellDef> Назва </th>
+    <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
+  </ng-container>
+
+  <!-- Description Column -->
+  <ng-container matColumnDef="Description">
+    <th mat-header-cell *matHeaderCellDef> Характеристика </th>
+    <td mat-cell *matCellDef="let element"> {{element.Description}} </td>
+  </ng-container>
+
+  <!-- IsStore Column -->
+  <ng-container matColumnDef="IsStore">
+    <th mat-header-cell *matHeaderCellDef> В магазині </th>
+    <td mat-cell *matCellDef="let element"> {{element.IsStore}} </td>
+  </ng-container>
+
+  <!-- IsStock Column -->
+  <ng-container matColumnDef="IsStock">
+    <th mat-header-cell *matHeaderCellDef> На складі </th>
+    <td mat-cell *matCellDef="let element"> {{element.IsStock}} </td>
+  </ng-container>
+
+  <!-- IsStock Column -->
+  <ng-container matColumnDef="Count">
+    <th mat-header-cell *matHeaderCellDef> Кількість </th>
+    <td mat-cell *matCellDef="let element"> {{element.Count}} </td>
+  </ng-container>
+
+  <!-- IsStock Column -->
+  <ng-container matColumnDef="CountStore">
+    <th mat-header-cell *matHeaderCellDef> Кількість в магазині </th>
+    <td mat-cell *matCellDef="let element"> {{element.CountStore}} </td>
+  </ng-container>
+
+  <!-- CountStock Column -->
+  <ng-container matColumnDef="CountStock">
+    <th mat-header-cell *matHeaderCellDef> Кількість на складі </th>
+    <td mat-cell *matCellDef="let element"> {{element.CountStock}} </td>
+  </ng-container>
+
+  <!-- Color Column -->
+  <ng-container matColumnDef="Color">
+    <th mat-header-cell *matHeaderCellDef> Колір </th>
+    <td mat-cell *matCellDef="let element"> {{element.Color}} </td>
+  </ng-container>
+
+  <!-- Size Column -->
+  <ng-container matColumnDef="Size">
+    <th mat-header-cell *matHeaderCellDef> Розмір </th>
+    <td mat-cell *matCellDef="let element"> {{element.Size}} </td>
+  </ng-container>
+
+  <!-- Ordered Column -->
+  <ng-container matColumnDef="Ordered">
+    <th mat-header-cell *matHeaderCellDef> Замовлено </th>
+    <td mat-cell *matCellDef="let element"> {{element.Ordered}} </td>
+  </ng-container>
+
+  <!-- Comment Column -->
+  <ng-container matColumnDef="Comment">
+    <th mat-header-cell *matHeaderCellDef> Нотатки </th>
+    <td mat-cell *matCellDef="let element"> {{element.Comment}} </td>
+  </ng-container>
+
+  <!-- Actions Column -->
+  <ng-container matColumnDef="Actions">
+    <th mat-header-cell *matHeaderCellDef> Дії </th>
+    <td mat-cell *matCellDef="let element"> </td>
+    <button (click)="updateEntry(element)" mat-raised-button class="edit">
+      <b>Edit</b>
+    </button>
+
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
