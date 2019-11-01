@@ -1,1 +1,67 @@
 <p>new-product works!</p>
+
+<mat-card>
+<span>Create new product</span>
+
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product id" formControlName="id" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product name" formControlName="name" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product description" formControlName="description" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <mat-select placeholder="Product store" formControlName="isStore">
+      <mat-opinion *ngFor="let type of types" [value]="type.value">
+        {{type.display}}
+      </mat-opinion>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <mat-select placeholder="Product stock" formControlName="isStock">
+      <mat-opinion *ngFor="let type of types" [value]="type.value">
+        {{type.display}}
+      </mat-opinion>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product count" formControlName="count" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product countStore" formControlName="countStore" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product countStock" formControlName="countStock" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product color" formControlName="color" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product size" formControlName="size" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product ordered" formControlName="ordered" />
+  </mat-form-field>
+
+  <mat-form-field class="new-product-field">
+    <input matInput placeholder="Product comment" formControlName="comment" />
+  </mat-form-field>
+
+  <button mat-raised-button>Create new </button>
+
+</form>
+</mat-card>

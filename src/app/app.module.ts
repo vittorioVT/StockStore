@@ -14,9 +14,14 @@ import { HttpClientModule } from '@angular/common/http';
 
 //material design
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material';
-import { MatTableModule } from '@angular/material/table';
+import {
+  MatButtonModule, MatTableModule, MatInputModule,
+  MatCardModule, MatSelectModule
+       } from '@angular/material';
 
+
+//forms
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -33,11 +38,18 @@ import { MatTableModule } from '@angular/material/table';
     BrowserModule,
     AppRouterModule,
     HttpClientModule,
+
+    //material design
     BrowserAnimationsModule,
     MatButtonModule,
     MatTableModule,
+    MatInputModule,
+    MatCardModule,
+    MatSelectModule,
 
-
+    //forms
+    ReactiveFormsModule,
+    
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]

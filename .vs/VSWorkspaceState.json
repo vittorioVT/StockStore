@@ -4,8 +4,10 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\footer",
+    "\\src\\app\\Intefaces",
+    "\\src\\app\\new-product",
     "\\src\\app\\products"
   ],
-  "SelectedNode": "\\src\\app\\products\\products.component.ts",
+  "SelectedNode": "\\src\\app\\new-product\\new-product.component.html",
   "PreviewInSolutionExplorer": false
 }
