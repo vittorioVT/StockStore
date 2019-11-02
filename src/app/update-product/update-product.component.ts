@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Type } from '../Intefaces/Type';
+import { ProductService } from '../product.service';
 
 @Component({
   selector: 'app-update-product',
@@ -17,7 +18,8 @@ export class UpdateProductComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private dialogRef: MatDialogRef<UpdateProductComponent>,
     @Inject(MAT_DIALOG_DATA) { Id, Name, Description, IsStore, IsStock,
-      Count, CountStore, CountStock, Color, Size, Ordered, Comment }) {
+      Count, CountStore, CountStock, Color, Size, Ordered, Comment },
+    private service: ProductService) {
     this.id = Id;
     this.form = fb.group({
       name: [Name, Validators.required],
