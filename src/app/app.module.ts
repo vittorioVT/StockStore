@@ -6,6 +6,7 @@ import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NewProductComponent } from './new-product/new-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 //services
 import { ProductService } from './product.service';
@@ -16,12 +17,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatTableModule, MatInputModule,
-  MatCardModule, MatSelectModule
+  MatCardModule, MatSelectModule, MatToolbarModule,
+  MatDialogModule
        } from '@angular/material';
 
 
 //forms
 import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -32,7 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductsComponent,
     FooterComponent,
     HeaderComponent,
-    NewProductComponent
+    NewProductComponent,
+    UpdateProductComponent
   ],
   imports: [
     BrowserModule,
@@ -46,11 +50,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatInputModule,
     MatCardModule,
     MatSelectModule,
+    MatToolbarModule,
+    MatDialogModule,
 
     //forms
     ReactiveFormsModule,
     
   ],
+  entryComponents: [UpdateProductComponent],
   providers: [ProductService],
   bootstrap: [AppComponent]
 })

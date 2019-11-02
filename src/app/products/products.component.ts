@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProductElements } from '../Intefaces/ProductElements';
+import { MatDialog } from '@angular/material';
+import { UpdateProductComponent } from '../update-product/update-product.component';
 
 @Component({
   selector: 'app-products',
@@ -15,7 +17,8 @@ export class ProductsComponent implements OnInit {
     'Ordered', 'Comment', 'Actions'];
  dataSource;
 
-  constructor(private service: ProductService) { }
+  constructor(private service: ProductService,
+              private dialog: MatDialog) { }
 
   ngOnInit() {
     
@@ -25,5 +28,26 @@ export class ProductsComponent implements OnInit {
       this.dataSource = new MatTableDataSource<ProductElements>(data as ProductElements[]);
     })
   }
+
+  updateProduct(product) {
+    console.log(product);
+    this.dialog.open(UpdateProductComponent, {
+      data: {
+        //Id: product.Id,
+        Name: product.Name,
+        Description: product.Description,
+        IsStore: product.IsStore,
+        IsStock: product.IsStock,
+        Count: product.Count,
+        CountStore: product.CountStore,
+        CountStock: product.CountStock,
+        Color: product.Color,
+        Size: product.Size,
+        Ordered: product.Ordered,
+        Comment: product.Comment
+      }
+    })
+  }
+
 
 }

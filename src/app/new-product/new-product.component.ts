@@ -19,7 +19,7 @@ export class NewProductComponent {
   constructor(private service: ProductService) { }
 
   productForm = new FormGroup({
-    id: new FormControl('', Validators.required),
+    //id: new FormControl('', Validators.required),
     name: new FormControl('', Validators.required),
     description: new FormControl('', Validators.required),
     isStore: new FormControl('', Validators.required),
@@ -34,6 +34,11 @@ export class NewProductComponent {
   })
 
   onSubmit() {
-    console.log(this.productForm.value);
+   this.service.createProduct(this.productForm.value).subscribe(
+      (data) => {
+        console.log('Data - ', data);
+      })
   }
+
+  
 }

@@ -1,5 +1,14 @@
 table {
 
   width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
 
 }
+.edit {
+  color:lightblue;
+  background-color: dodgerblue;
+}
+

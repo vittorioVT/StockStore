@@ -1,8 +1,6 @@
-<mat-card>
-<span>Create new product</span>
+<h2 mat-dialog-title>Редагування характеристик товару</h2>
 
-<form class="new-product-form" [formGroup]="productForm" (ngSubmit)="onSubmit()">
-
+<mat-dialog-content [formGroup]="form">
   <!--<mat-form-field class="new-product-field">
     <input matInput placeholder="Product id" formControlName="id" />
   </mat-form-field>-->
@@ -10,56 +8,57 @@
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product name" formControlName="name" />
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product description" formControlName="description" />
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <mat-select placeholder="Product store" formControlName="isStore">
-      <mat-option *ngFor="let type of types" [value]="type.value">
+      <mat-option *ngFor="let type of Types" [value]="type.value">
         {{type.display}}
       </mat-option>
     </mat-select>
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <mat-select placeholder="Product stock" formControlName="isStock">
-      <mat-option *ngFor="let type of types" [value]="type.value">
+      <mat-option *ngFor="let type of Types" [value]="type.value">
         {{type.display}}
       </mat-option>
     </mat-select>
   </mat-form-field>
-  
+  <br />
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product count" formControlName="count" />
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product countStore" formControlName="countStore" />
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product countStock" formControlName="countStock" />
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product color" formControlName="color" />
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product size" formControlName="size" />
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product ordered" formControlName="ordered" />
   </mat-form-field>
-
+  <br />
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product comment" formControlName="comment" />
   </mat-form-field>
+</mat-dialog-content>
 
-  <button mat-raised-button [disabled]="!productForm.valid">Create new </button>
-
-</form>
-</mat-card>
+<mat-dialog-actions>
+  <button class="mat-raised-button" (click)="close()">Закрити</button>
+  <button class="mat-raised-button" (click)="save()">Зберегти</button>
+</mat-dialog-actions>
