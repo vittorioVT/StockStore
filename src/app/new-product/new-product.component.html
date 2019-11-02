@@ -1,9 +1,7 @@
-<p>new-product works!</p>
-
 <mat-card>
 <span>Create new product</span>
 
-<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+<form class="new-product-form" [formGroup]="productForm" (ngSubmit)="onSubmit()">
 
   <mat-form-field class="new-product-field">
     <input matInput placeholder="Product id" formControlName="id" />
@@ -19,17 +17,17 @@
 
   <mat-form-field class="new-product-field">
     <mat-select placeholder="Product store" formControlName="isStore">
-      <mat-opinion *ngFor="let type of types" [value]="type.value">
+      <mat-option *ngFor="let type of types" [value]="type.value">
         {{type.display}}
-      </mat-opinion>
+      </mat-option>
     </mat-select>
   </mat-form-field>
 
   <mat-form-field class="new-product-field">
     <mat-select placeholder="Product stock" formControlName="isStock">
-      <mat-opinion *ngFor="let type of types" [value]="type.value">
+      <mat-option *ngFor="let type of types" [value]="type.value">
         {{type.display}}
-      </mat-opinion>
+      </mat-option>
     </mat-select>
   </mat-form-field>
   
@@ -61,7 +59,7 @@
     <input matInput placeholder="Product comment" formControlName="comment" />
   </mat-form-field>
 
-  <button mat-raised-button>Create new </button>
+  <button mat-raised-button [disabled]="!productForm.valid">Create new </button>
 
 </form>
 </mat-card>
