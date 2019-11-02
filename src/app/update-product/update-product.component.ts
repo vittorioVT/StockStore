@@ -43,11 +43,15 @@ export class UpdateProductComponent implements OnInit {
   ]
 
   close() {
-    console.log("close clicked");
+    this.dialogRef.close();
   }
 
   save() {
-    console.log("save clicked");
+    this.form.value.id = this.id;
+    this.service.updateProduct(this.id, this.form.value).subscribe(
+      (data) => {
+        console.log('Data: ', data);
+      })
   }
 
 

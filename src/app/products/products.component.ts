@@ -33,7 +33,7 @@ export class ProductsComponent implements OnInit {
     console.log(product);
     this.dialog.open(UpdateProductComponent, {
       data: {
-        //Id: product.Id,
+        Id: product.Id,
         Name: product.Name,
         Description: product.Description,
         IsStore: product.IsStore,
