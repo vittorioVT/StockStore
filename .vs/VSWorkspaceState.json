@@ -3,10 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\footer",
-    "\\src\\app\\Intefaces",
     "\\src\\app\\new-product",
-    "\\src\\app\\products"
+    "\\src\\app\\products",
+    "\\src\\app\\update-product"
   ],
   "SelectedNode": "\\src\\app\\product.service.ts",
   "PreviewInSolutionExplorer": false

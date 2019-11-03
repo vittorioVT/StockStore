@@ -11,4 +11,10 @@ table {
   color: white;
   background-color: dodgerblue;
 }
+.delete{
+  color: white;
+  background-color: darkblue;
+  margin-left: 5px;
+  margin-right: 5px;
 
+}
