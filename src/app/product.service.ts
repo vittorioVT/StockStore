@@ -29,4 +29,8 @@ export class ProductService {
     return this.http.get(this.baseUrl + '/' + id);
   }
 
+  deleteProduct(id) {
+    return this.http.delete(this.baseUrl + '/' + id);
+  }
+
 }

@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { Type } from '../Intefaces/Type';
 import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-update-product',
@@ -14,8 +15,10 @@ export class UpdateProductComponent implements OnInit {
   form: FormGroup;
   id: number;
   
+  
 
   constructor(private fb: FormBuilder,
+    private router: Router,
     private dialogRef: MatDialogRef<UpdateProductComponent>,
     @Inject(MAT_DIALOG_DATA) { Id, Name, Description, IsStore, IsStock,
       Count, CountStore, CountStock, Color, Size, Ordered, Comment },
@@ -44,6 +47,7 @@ export class UpdateProductComponent implements OnInit {
 
   close() {
     this.dialogRef.close();
+    //this.router.navigate(['/']);
   }
 
   save() {
@@ -51,7 +55,9 @@ export class UpdateProductComponent implements OnInit {
     this.service.updateProduct(this.id, this.form.value).subscribe(
       (data) => {
         console.log('Data: ', data);
-      })
+      });
+    this.router.navigate(['/']);
+    this.close();
   }
 
 
