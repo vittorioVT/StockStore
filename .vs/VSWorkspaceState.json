@@ -3,10 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\new-product",
-    "\\src\\app\\products",
-    "\\src\\app\\update-product"
+    "\\src\\app\\delete-product"
   ],
-  "SelectedNode": "\\src\\app\\product.service.ts",
+  "SelectedNode": "\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }

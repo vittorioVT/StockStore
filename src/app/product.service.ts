@@ -24,6 +24,9 @@ export class ProductService {
     return this.http.put(this.baseUrl + '/' + id, product);
   }
 
+  getProduct(id) {
 
+    return this.http.get(this.baseUrl + '/' + id);
+  }
 
 }

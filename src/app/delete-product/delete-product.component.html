@@ -1,1 +1,53 @@
-<p>delete-product works!</p>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Ви впевнені, що хочете видалити цей товар?</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>
+        <b>Id:&nbsp;</b>{{product.id}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <b>Name:&nbsp;</b>{{producs.name}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <b>Description:&nbsp;</b>{{entry.desctription}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <b>Count:&nbsp;</b>{{product.count}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <b>CountStore:&nbsp;</b>{{product.countStore}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <b>CountStock:&nbsp;</b>{{product.countStock}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <b>Color:&nbsp;</b>{{product.color}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+
+      <mat-list-item>
+        <b>Size:&nbsp;</b>{{product.count}}
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-flat-button class="cancel" (click)="cancel()"><b>Відмінити</b></button>
+    <button mat-raised-button class="confirm" (click)="confirm()"><b>Підтвердити</b></button>
+  </mat-card-actions>
+</mat-card>

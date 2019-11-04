@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component';
 
 //services
 import { ProductService } from './product.service';
@@ -18,13 +19,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule, MatTableModule, MatInputModule,
   MatCardModule, MatSelectModule, MatToolbarModule,
-  MatDialogModule
+  MatDialogModule, MatListModule,
        } from '@angular/material';
 
 
 //forms
 import { ReactiveFormsModule } from '@angular/forms';
-import { DeleteProductComponent } from './delete-product/delete-product.component';
+
 
 
 
@@ -54,6 +55,7 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
     MatSelectModule,
     MatToolbarModule,
     MatDialogModule,
+    MatListModule,
 
     //forms
     ReactiveFormsModule,
