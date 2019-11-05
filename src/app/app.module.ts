@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
+import { RegisterComponent } from './register/register.component';
 
 //services
 import { ProductService } from './product.service';
@@ -32,6 +33,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     NewProductComponent,
     UpdateProductComponent,
-    DeleteProductComponent
+    DeleteProductComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
