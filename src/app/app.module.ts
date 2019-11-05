@@ -13,6 +13,7 @@ import { DeleteProductComponent } from './delete-product/delete-product.componen
 import { ProductService } from './product.service';
 import { AppRouterModule } from './app-router.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './auth.service';
 
 //material design
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -62,7 +63,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     
   ],
   entryComponents: [UpdateProductComponent],
-  providers: [ProductService],
+  providers: [ProductService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
