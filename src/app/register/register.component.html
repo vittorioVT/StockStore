@@ -17,6 +17,8 @@
     </mat-form-field>
     <br />
 
+    <span *ngIf="registerForm.errors?.matchingFields">Passwords do not match</span>
+
     <button mat-raised-button class="register" [disabled]="!registerForm.valid">Реєстрація</button>
   </form>
 </mat-card>
