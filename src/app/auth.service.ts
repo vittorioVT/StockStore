@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  baseUrl: string = 'http://localhost:13764/auth';
+  baseUrl: string = 'http://localhost:13764/auth/';
 
   constructor(private http: HttpClient) { }
 
@@ -17,5 +17,15 @@ export class AuthService {
   login(user) {
     return this.http.post(this.baseUrl + 'login', user);
   }
+
+  get getUserName() {
+    return localStorage.getItem('userName');
+  }
+
+  get isAuthenticated() {
+    return !!localStorage.getItem('token_value');
+  }
+
+
 
 }
