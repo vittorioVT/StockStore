@@ -9,13 +9,12 @@ table {
 }
 .edit {
   color: white;
-  background-color: dodgerblue;
+  background-color: darkslateblue;
   margin-bottom: 5px;
-  
 }
 .delete {
   color: white;
-  background-color: darkblue;
+  background-color: firebrick;
   /*background-color: cornflowerblue;*/
   margin-left: 5px;
   margin-right: 5px;

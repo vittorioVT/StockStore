@@ -7,5 +7,5 @@
   <button mat-button *ngIf="auth.isAuthenticated">Ласкаво просимо, {{auth.getUserName}}</button>
   <button mat-button *ngIf="auth.isAuthenticated" (click)="auth.logout()"><b>Вийти</b></button>
   <button mat-button routerLink="/register"><b>Реєстрація</b></button>
-
+  <button mat-button *ngIf="!auth.isAuthenticated" routerLink="/login"><b>Увійти</b></button>
 </mat-toolbar>
