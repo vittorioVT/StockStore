@@ -27,6 +27,7 @@ import {
 
 //forms
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -43,7 +44,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NewProductComponent,
     UpdateProductComponent,
     DeleteProductComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
