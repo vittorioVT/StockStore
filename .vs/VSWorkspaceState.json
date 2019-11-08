@@ -7,10 +7,10 @@
     "\\src\\app\\footer",
     "\\src\\app\\header",
     "\\src\\app\\Intefaces",
+    "\\src\\app\\login",
     "\\src\\app\\new-product",
-    "\\src\\app\\products",
-    "\\src\\app\\register"
+    "\\src\\app\\update-product"
   ],
-  "SelectedNode": "\\src\\app\\header\\header.component.ts",
+  "SelectedNode": "\\src\\app\\login\\login.component.css",
   "PreviewInSolutionExplorer": false
 }

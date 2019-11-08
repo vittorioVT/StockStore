@@ -9,6 +9,7 @@ import { NewProductComponent } from './new-product/new-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 //services
 import { ProductService } from './product.service';
@@ -27,7 +28,7 @@ import {
 
 //forms
 import { ReactiveFormsModule } from '@angular/forms';
-import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -49,8 +50,8 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRouterModule,
     HttpClientModule,
+    AppRouterModule,
 
     //material design
     BrowserAnimationsModule,
@@ -65,7 +66,7 @@ import { LoginComponent } from './login/login.component';
 
     //forms
     ReactiveFormsModule,
-    
+    FormsModule    
   ],
   entryComponents: [UpdateProductComponent],
   providers: [ProductService, AuthService],
