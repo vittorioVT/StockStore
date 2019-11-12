@@ -30,7 +30,7 @@ export class RegisterComponent {
       console.log(data);
       localStorage.setItem('userName', data.UserName);
       localStorage.setItem('token_value', data.Token);
-      this.router.navigate(['/']);
+      this.router.navigate(['/products']);
     })
 
   }

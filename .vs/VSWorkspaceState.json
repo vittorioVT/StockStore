@@ -3,14 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\delete-product",
-    "\\src\\app\\footer",
-    "\\src\\app\\header",
-    "\\src\\app\\Intefaces",
-    "\\src\\app\\login",
-    "\\src\\app\\products",
-    "\\src\\app\\register"
+    "\\src\\app\\new-product"
   ],
-  "SelectedNode": "\\src\\app\\new-product\\new-product.component.html",
+  "SelectedNode": "\\src\\app\\product.service.ts",
   "PreviewInSolutionExplorer": false
 }

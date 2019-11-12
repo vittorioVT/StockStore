@@ -10,6 +10,7 @@ import { UpdateProductComponent } from './update-product/update-product.componen
 import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 //services
 import { ProductService } from './product.service';
@@ -34,9 +35,6 @@ import { FormsModule } from '@angular/forms';
 
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,8 +45,9 @@ import { FormsModule } from '@angular/forms';
     UpdateProductComponent,
     DeleteProductComponent,
     RegisterComponent,
-    LoginComponent
-  ],
+    LoginComponent,
+    MainPageComponent,
+   ],
   imports: [
     BrowserModule,
     HttpClientModule,

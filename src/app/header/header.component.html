@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <button mat-button routerLink="/"><b>Головна</b></button>
-  <button mat-button routerLink="/products"><b>Товари</b></button>
+  <button mat-button *ngIf="auth.isAuthenticated" routerLink="/products"><b>Товари</b></button>
   <button mat-button *ngIf="auth.isAuthenticated" routerLink="/new-product"><b>Створити новий</b></button>
 
   <span style="flex: 1 1 auto"></span>

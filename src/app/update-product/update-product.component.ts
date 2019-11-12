@@ -56,7 +56,7 @@ export class UpdateProductComponent implements OnInit {
       (data) => {
         console.log('Data: ', data);
       });
-    this.router.navigate(['/']);
+    this.router.navigate(['/products']);
     this.close();
   }
 
