@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../product.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProductElements } from '../Intefaces/ProductElements';
-import { MatDialog, MatSort } from '@angular/material';
+import { MatDialog, MatSort, MatPaginator } from '@angular/material';
 import { UpdateProductComponent } from '../update-product/update-product.component';
 
 @Component({
@@ -17,6 +17,7 @@ export class ProductsComponent implements OnInit {
     'Ordered', 'Comment', 'Actions'];
   dataSource;
   @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
 
   constructor(private service: ProductService,
               private dialog: MatDialog) { }
@@ -27,6 +28,7 @@ export class ProductsComponent implements OnInit {
 
       console.log('Result - ', data);
       this.dataSource = new MatTableDataSource<ProductElements>(data as ProductElements[]);
+      this.dataSource.paginator = this.paginator;
     })
   }
 
