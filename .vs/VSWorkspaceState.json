@@ -8,9 +8,9 @@
     "\\src\\app\\header",
     "\\src\\app\\Intefaces",
     "\\src\\app\\login",
-    "\\src\\app\\new-product",
-    "\\src\\app\\update-product"
+    "\\src\\app\\products",
+    "\\src\\app\\register"
   ],
-  "SelectedNode": "\\src\\app\\login\\login.component.css",
+  "SelectedNode": "\\src\\app\\new-product\\new-product.component.html",
   "PreviewInSolutionExplorer": false
 }

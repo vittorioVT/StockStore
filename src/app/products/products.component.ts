@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../product.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProductElements } from '../Intefaces/ProductElements';
-import { MatDialog } from '@angular/material';
+import { MatDialog, MatSort } from '@angular/material';
 import { UpdateProductComponent } from '../update-product/update-product.component';
 
 @Component({
@@ -15,7 +15,8 @@ export class ProductsComponent implements OnInit {
   displayedColumns: string[] = ['Id', 'Name', 'Description', 'IsStore',
     'IsStock', 'Count', 'CountStore', 'CountStock', 'Color', 'Size',
     'Ordered', 'Comment', 'Actions'];
- dataSource;
+  dataSource;
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
 
   constructor(private service: ProductService,
               private dialog: MatDialog) { }
@@ -27,6 +28,10 @@ export class ProductsComponent implements OnInit {
       console.log('Result - ', data);
       this.dataSource = new MatTableDataSource<ProductElements>(data as ProductElements[]);
     })
+  }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
   updateProduct(product) {
