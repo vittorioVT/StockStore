@@ -46,7 +46,7 @@ export class DeleteProductComponent implements OnInit {
   confirm() {
     this.service.deleteProduct(this.id).subscribe((data) => {
       console.log(data);
-      this.router.navigate(['/']);
+      this.router.navigate(['/products']);
     })
   }
 

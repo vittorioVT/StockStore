@@ -1,16 +1,38 @@
 .confirm {
   margin: 10px;
+  background-color: firebrick;
   color: white;
-  background-color: cornflowerblue;
+  font-weight: bold;
+  font-family: Verdana;
 }
 
 .cancel {
   margin: 10px;
+  background-color: darkslateblue;
   color: white;
-  background-color: cornflowerblue;
+  font-weight: bold;
+  font-family: Verdana;
 }
+
 mat-card {
   width: 40%;
   margin: 5% 30% 5% 30%;
+  
+}
 
+.mat-card-title {
+  color: firebrick;
+  font-weight: bold;
+  font-family: Verdana;
+}
+
+.mat-list-item {
+  color: darkslateblue;
+  font-weight: bold;
+  font-family: Verdana;
+}
+
+.deleteItem {
+  color: firebrick;
+  font-family: Verdana;
 }
