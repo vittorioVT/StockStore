@@ -10,4 +10,8 @@ table {
   color: darkslateblue;
   font-weight: bold;
   font-family: Verdana;
+  text-align: center;
+}
+.mat-cell {
+  text-align: center;
 }

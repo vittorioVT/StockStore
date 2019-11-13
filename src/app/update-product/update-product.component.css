@@ -1,9 +1,17 @@
 .close {
   color: white;
   background-color: firebrick;
-  
+  font-weight: bold;
 }
+
 .save {
   color: white;
   background-color: darkslateblue;
+  font-weight: bold;
+}
+
+.update {
+  color: darkslateblue;
+  font-weight: bold;
+  font-family: Verdana;
 }
