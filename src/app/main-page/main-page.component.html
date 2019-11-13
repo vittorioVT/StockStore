@@ -1,3 +1,8 @@
+<!--Filter input -->
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Пошук товарів..." />
+</mat-form-field>
+
 <!-- Start Table -->
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
@@ -76,3 +81,7 @@
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<!--Pagination form -->
+<mat-paginator [length]="100" [pageSize]="10" [pageSizeOptions]="[1,5,10,25,100]">
+</mat-paginator>

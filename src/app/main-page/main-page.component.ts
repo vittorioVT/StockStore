@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProductService } from '../product.service';
 import { ProductElements } from '../Intefaces/ProductElements';
+import { MatSort, MatPaginator } from '@angular/material';
 
 @Component({
   selector: 'app-main-page',
@@ -16,15 +17,22 @@ export class MainPageComponent implements OnInit {
 
   dataSource;
 
+  @ViewChild(MatSort, { static: false }) sort: MatSort;
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+
   constructor(private service: ProductService) { }
 
   ngOnInit() {
     this.service.getAll().subscribe((data) => {
       console.log('Result - ', data);
       this.dataSource = new MatTableDataSource<ProductElements>(data as ProductElements[]);
+      this.dataSource.paginator = this.paginator;
     })
-    
-
   }
+
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
 
 }
