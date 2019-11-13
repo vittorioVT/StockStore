@@ -3,6 +3,11 @@
   margin-top: 20% 20% 20% 20%;
 }
 
+.mat-card {
+  color: darkslateblue;
+  font-weight: bold;
+  font-family: Verdana;
+}
 .new-product-field {
   width: 50%;
   margin-left: 20%;
@@ -11,4 +16,10 @@
 
 .new-form-btn {
   position: relative;
+}
+.create {
+  background-color: firebrick;
+  color: white;
+  font-weight: bold;
+  font-family: Verdana;
 }

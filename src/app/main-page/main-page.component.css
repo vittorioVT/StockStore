@@ -6,3 +6,8 @@ table {
   margin-right: 5px;
 }
 
+.mat-header-cell {
+  color: darkslateblue;
+  font-weight: bold;
+  font-family: Verdana;
+}

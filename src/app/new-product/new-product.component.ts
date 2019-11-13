@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Type } from '../Intefaces/Type';
 import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class NewProductComponent {
 
   ]
 
-  constructor(private service: ProductService) { }
+  constructor(private service: ProductService,
+              private router: Router) { }
 
   productForm = new FormGroup({
     //id: new FormControl('', Validators.required),
@@ -37,6 +39,7 @@ export class NewProductComponent {
    this.service.createProduct(this.productForm.value).subscribe(
       (data) => {
         console.log('Data - ', data);
+        this.router.navigate(['/']);
       })
   }
 
