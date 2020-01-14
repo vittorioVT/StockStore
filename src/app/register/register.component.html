@@ -1,14 +1,13 @@
 <mat-card>
   <span class="createRegister">Створити новий обліковий запис</span>
-
-  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <mat-form-field>
-      <input matInput placeholder="Ім'я користувача" formControlName="userName" />
+      <input matInput minLength="3" placeholder="Ім'я користувача (не менше 3 символів)" formControlName="userName" required/>
     </mat-form-field>
     <br />
 
     <mat-form-field>
-      <input matInput placeholder="Ввести пароль" formControlName="password" />
+      <input matInput placeholder="Ввести пароль (не менше 5 символів)" formControlName="password" />
     </mat-form-field>
     <br />
 

@@ -3,14 +3,14 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\delete-product",
+    "\\src\\app\\footer",
     "\\src\\app\\header",
+    "\\src\\app\\Intefaces",
     "\\src\\app\\login",
-    "\\src\\app\\main-page",
-    "\\src\\app\\new-product",
     "\\src\\app\\products",
-    "\\src\\app\\register",
     "\\src\\app\\update-product"
   ],
-  "SelectedNode": "\\src\\app\\header\\header.component.html",
+  "SelectedNode": "\\src\\app\\update-product\\update-product.component.ts",
   "PreviewInSolutionExplorer": false
 }

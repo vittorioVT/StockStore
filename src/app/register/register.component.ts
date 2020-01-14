@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
@@ -23,6 +23,7 @@ export class RegisterComponent {
       validator: matchingFields('password', 'confirmPassword')
     })
   }
+
 
   onSubmit() {
     delete this.registerForm.value.confirmPassword;
